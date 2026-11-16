@@ -8,7 +8,7 @@ This is the durable agreement between the learner and agent. Keep it concise and
 
 - Stage: Modernist course catalog selected. Logo approved; storefront and guide implemented. Checks and learner review in progress.
 - Current feature: `BRAND-001` — first branded storefront and live style guide.
-- Status: Scope agreed. Work is on `feature/brand-001` ([issue #1](https://github.com/rajveer-r-sharma/Brand-Studio-Webpage/issues/1)).
+- Status: [Pull request #2](https://github.com/rajveer-r-sharma/Brand-Studio-Webpage/pull/2) opened; checks and final merge approval pending. Scope agreed. Work is on `feature/brand-001` ([issue #1](https://github.com/rajveer-r-sharma/Brand-Studio-Webpage/issues/1)).
 - Next small decision: Review the checked pull request and decide whether to merge.
 
 ## Product boundary
