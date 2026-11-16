@@ -1,4 +1,8 @@
-# IS117 Brand Studio
+# Class Staple — IS117 Brand Studio
+
+**BRAND-001 implementation is ready for pull-request review.** Class Staple is a modernist storefront for students who want simple school outfits. It includes a live style guide, original SVG logo, two annotated hero explorations, free styling advice, and an optional navy/black trouser preview. See [SPEC.md](SPEC.md) and the learner-reviewed [LEARNING.md](LEARNING.md).
+
+The original class instructions follow.
 
 **The same white T-shirt can carry very different meanings.** Develop a brand for it with an AI collaborator, then make those decisions visible in a professional website and a live style guide.
 
