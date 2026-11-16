@@ -6,10 +6,10 @@ This is the durable agreement between the learner and agent. Keep it concise and
 
 ## Current stage
 
-- Stage: Modernist course catalog selected. Logo approved; storefront and guide implemented. Checks and learner review in progress.
+- Stage: BRAND-001 kept and merged into main on 2026-11-16.
 - Current feature: `BRAND-001` — first branded storefront and live style guide.
-- Status: [Pull request #2](https://github.com/rajveer-r-sharma/Brand-Studio-Webpage/pull/2) opened; checks and final merge approval pending. Scope agreed. Work is on `feature/brand-001` ([issue #1](https://github.com/rajveer-r-sharma/Brand-Studio-Webpage/issues/1)).
-- Next small decision: Review the checked pull request and decide whether to merge.
+- Status: [Pull request #2](https://github.com/rajveer-r-sharma/Brand-Studio-Webpage/pull/2) merged after full GitHub checks passed and the learner approved the merge. Scope agreed. Work is on `feature/brand-001` ([issue #1](https://github.com/rajveer-r-sharma/Brand-Studio-Webpage/issues/1)).
+- Next small decision: Submit the repository URL in Canvas.
 
 ## Product boundary
 
@@ -94,6 +94,10 @@ No follow-up is selected. After keeping `BRAND-001`, choose one next cycle: perh
 
 The learner preferred the optional pairing preview because students can see whether they like the outfit. Navy and black previews now accompany the original tee. Each bag entry retains the pairing chosen when added. The learner approved keeping the free outfit tip as the second persuasion application.
 
-Storefront and guide share catalog.css, styles.css, and class-staple.svg. Formatting and lint pass, as do seven server tests. The prepared Chromium journey cannot launch in this environment, so the full check is incomplete.
+Storefront and guide share catalog.css, styles.css, and class-staple.svg. Formatting and lint pass, as do seven server tests. Local Chromium launch was blocked. The complete prepared suite subsequently passed on [GitHub Actions](https://github.com/rajveer-r-sharma/Brand-Studio-Webpage/actions/runs/43897476399).
 
 In the available browser, pressing Add to demo bag without a size showed the size error and left the bag empty. Selecting Navy and M then adding produced one size M tee with a navy styling reminder. Switching the preview to Black left that existing reminder intact. At 1000px and 375px, the storefront, guide, and studio had no horizontal overflow. The agent inspected their rendered first views. Learner reports a good first impression from the simplicity, clear shirt description, size choice near the top, and clean border. Learner reports being able to navigate, select what they want, and add the shirt using the keyboard. Visible focus was not specifically described. Learner reports that at narrow/mobile width nothing was cut off or difficult to use and everything fit well.
+
+## Final keep decision
+
+The learner approved merging PR #2 after reviewing the passing checks and the purpose of merging the feature branch into main. [PR #2](https://github.com/rajveer-r-sharma/Brand-Studio-Webpage/pull/2) was verified merged on 2026-11-16 as ecac7a3fb0f46704afdbf14be5f3da98e9cf9bee. Publishing is optional and has not been requested.
