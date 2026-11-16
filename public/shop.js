@@ -16,14 +16,30 @@
     bagCount.textContent = String(bag.length);
     clearBag.disabled = bag.length === 0;
     bagItems.replaceChildren();
-    sizes.forEach((size) => {
-      const quantity = bag.filter((item) => item === size).length;
-      if (!quantity) return;
+    const quantities = new Map();
+    for (const entry of bag) {
+      quantities.set(entry, (quantities.get(entry) || 0) + 1);
+    }
+    for (const [entry, quantity] of quantities) {
+      const [size, color] = entry.split("/");
       const item = document.createElement("li");
       item.textContent = `White T-shirt · Size ${size} · Quantity ${quantity}`;
+      if (color) item.append(` · Styling idea: ${color} trousers`);
       bagItems.append(item);
-    });
+    }
   };
+
+  const look = document.querySelector("#look");
+  let pairing = "";
+  document.querySelectorAll('input[name="pairing"]').forEach((radio) => {
+    radio.addEventListener("change", () => {
+      pairing = radio.value;
+      look.hidden = false;
+      look.dataset.color = pairing;
+      document.querySelector("#look-caption").textContent =
+        `White tee with ${pairing.toLowerCase()} trousers`;
+    });
+  });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -38,7 +54,7 @@
     }
 
     sizeError.hidden = true;
-    bag.push(selected.value);
+    bag.push(`${selected.value}/${pairing}`);
     renderBag();
     const itemWord = bag.length === 1 ? "item" : "items";
     bagStatus.textContent = `Added a white T-shirt in size ${selected.value}. Your demo bag has ${bag.length} ${itemWord}.`;

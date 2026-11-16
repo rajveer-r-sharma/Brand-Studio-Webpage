@@ -1,0 +1,182 @@
+:root {
+  --color-paper: #faf9f3;
+  --color-ink: #182b40;
+  --color-accent: #dce3e9;
+  --font-body: arial, helvetica, sans-serif;
+  --font-display: arial, helvetica, sans-serif;
+}
+
+.catalog {
+  max-width: 80rem;
+  margin: auto;
+  padding: 0 clamp(1rem, 4vw, 4rem);
+}
+
+.mast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 2px solid;
+  padding: 1.25rem 0;
+}
+
+.mast nav {
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 2rem);
+  align-items: center;
+}
+
+.mast a {
+  font-weight: 700;
+}
+
+.catalog-hero,
+.purchase,
+.guide-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  border-bottom: 1px solid;
+}
+
+.catalog-hero {
+  align-items: center;
+}
+
+.catalog h1 {
+  font: 700 clamp(3rem, 6.8vw, 6rem)/0.98 var(--font-display);
+  letter-spacing: -0.06em;
+  margin: 0;
+}
+
+.catalog h2,
+.catalog h3 {
+  font: 700 clamp(1.6rem, 3vw, 2.7rem)/1.1 var(--font-display);
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+.catalog p {
+  max-width: 48ch;
+}
+
+.lead {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.catalog-action {
+  display: inline-flex;
+  gap: 2rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--color-ink);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.shirt-frame {
+  background: var(--color-ink);
+  padding: clamp(0.65rem, 2vw, 1.8rem);
+}
+
+.shirt-frame img {
+  width: 100%;
+  max-height: 29rem;
+  background: var(--color-soft);
+  object-fit: contain;
+}
+
+.pair-options {
+  margin: 1rem 0;
+  border: 0;
+  padding: 0;
+}
+
+.pair-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid;
+  margin: 0.5rem 0.25rem 0 0;
+  cursor: pointer;
+}
+
+#look {
+  margin: 1rem 0;
+}
+
+.outfit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-soft);
+  gap: 0.5rem;
+  padding: 1rem;
+  color: #243954;
+}
+
+.outfit-shirt {
+  width: 50%;
+  height: 10rem;
+  background: url("assets/white-shirt.svg") center/contain no-repeat;
+}
+
+.outfit svg {
+  width: 36%;
+  height: 9rem;
+}
+
+#look[data-color="Black"] .outfit {
+  color: #29292b;
+}
+
+.catalog .wrap {
+  width: 100%;
+}
+
+.guide-intro {
+  padding: 3rem 0;
+  border-bottom: 1px solid;
+}
+
+.chips {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: block;
+  width: 5rem;
+  height: 3rem;
+  border: 1px solid;
+}
+
+@media (width <= 650px) {
+  .catalog-hero,
+  .purchase,
+  .guide-row {
+    grid-template-columns: 1fr;
+  }
+
+  .shirt-frame img {
+    max-height: 19rem;
+  }
+}
+
+.chip-paper {
+  background: var(--color-paper);
+}
+
+.chip-ink {
+  background: var(--color-ink);
+}
+
+.chip-soft {
+  background: var(--color-soft);
+}

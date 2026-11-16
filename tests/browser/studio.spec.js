@@ -117,3 +117,18 @@ for (const route of ["/", "/styleguide.html", "/studio.html"]) {
     await expect(page.getByRole("main")).toBeVisible();
   });
 }
+
+test("the optional trouser preview keeps the chosen pairing with its tee", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("radio", { name: "Navy" }).check();
+  await expect(page.locator("#look")).toBeVisible();
+  await expect(page.locator("#look-caption")).toContainText("navy trousers");
+  await page.getByRole("radio", { name: "M", exact: true }).check();
+  await page.getByRole("button", { name: "Add to demo bag" }).click();
+  await page.getByRole("radio", { name: "Black" }).check();
+  await expect(page.locator("#look-caption")).toContainText("black trousers");
+  await expect(page.locator("#bag-items")).toContainText("Navy trousers");
+  await expect(page.locator("#bag-count")).toHaveText("1");
+});

@@ -3,85 +3,89 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="An unfinished, neutral T-shirt storefront for the IS117 Brand Studio. Build a brand through deliberate, visible design choices."
-    />
-    <title>Your Brand — neutral storefront starter</title>
+    <title>Your everyday white tee | Class Staple</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="catalog.css" />
     <script src="shop.js" defer></script>
   </head>
-  <body>
+  <body class="catalog">
     <a class="skip-link" href="#main">Skip to content</a>
-    <aside class="starter-notice" aria-label="Starter information">
-      <span
-        ><strong>Unfinished by design.</strong> This is a neutral teaching
-        starter. Replace its identity after your brand decisions.</span
-      >
-      <a href="studio.html"
-        >Enter the studio <span aria-hidden="true">↗</span></a
-      >
-    </aside>
-    <header class="site-header wrap">
-      <a
-        class="brand-link"
-        href="index.html"
-        aria-label="Your Brand storefront home"
+    <header class="mast">
+      <a href="index.html" aria-label="Class Staple home"
         ><img
           class="wordmark"
-          src="assets/wordmark.svg"
-          alt="Neutral starter wordmark"
-          width="175"
-          height="26"
+          src="assets/class-staple.svg"
+          alt="Class Staple"
+          width="224"
+          height="40"
       /></a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a class="nav-link" href="index.html" aria-current="page">Shop</a>
-        <a class="nav-link" href="styleguide.html">Style guide</a>
-        <a class="nav-link" href="studio.html"
-          >Studio <span aria-hidden="true">↗</span></a
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Shop</a
+        ><a href="styleguide.html">Style guide</a
+        ><a href="#demo-bag" aria-label="View demo bag"
+          >Demo bag <span id="bag-count">0</span></a
         >
       </nav>
-      <a class="bag-link" href="#demo-bag" aria-label="View demo bag"
-        >Demo bag <span id="bag-count" class="bag-count">0</span></a
-      >
     </header>
-
     <main id="main">
-      <section class="product-section wrap" aria-labelledby="product-title">
-        <div class="product-visual">
-          <div class="visual-label">
-            <span>001 / The starting point</span><span>Unbranded</span>
-          </div>
-          <img
-            class="shirt-image"
-            src="assets/white-shirt.svg"
-            alt="Plain white, unbranded short-sleeved T-shirt"
-            width="800"
-            height="880"
-            fetchpriority="high"
-          />
-          <div class="image-caption">
-            <span>One product. Room for your point of view.</span
-            ><span aria-hidden="true">↙</span>
-          </div>
+      <section class="catalog-hero">
+        <div>
+          <h1>Your everyday white tee.</h1>
+          <p class="lead">
+            A white tee that goes with what you already wear to class. Try it
+            with navy or black trousers.
+          </p>
+          <a class="catalog-action" href="#product-form"
+            >Choose a size <span aria-hidden="true">↗</span></a
+          >
         </div>
-        <div class="product-information">
-          <p class="eyebrow">
-            <span class="status-dot" aria-hidden="true"></span> Neutral product
-            / demo only
+        <div class="shirt-frame">
+          <img
+            src="assets/white-shirt.svg"
+            alt="Plain white crewneck T-shirt"
+          />
+        </div>
+      </section>
+      <section class="purchase">
+        <div>
+          <h2>Picture the pairing.</h2>
+          <p>
+            Try navy trousers with an open overshirt, or keep it simple with
+            black pants.
           </p>
-          <h1 id="product-title">The white<br />T-shirt.</h1>
-          <p class="product-intro">A plain shirt. A place to begin.</p>
-          <p class="muted product-description">
-            This starter has a working product page and room for a brand. Its
-            audience, personality, message, and visual direction are still yours
-            to decide.
+          <fieldset class="pair-options">
+            <legend>Preview a trouser color (optional)</legend>
+            <label
+              ><input type="radio" name="pairing" value="Navy" /> Navy</label
+            ><label
+              ><input type="radio" name="pairing" value="Black" /> Black</label
+            >
+          </fieldset>
+          <figure id="look" hidden>
+            <div class="outfit">
+              <span class="outfit-shirt" aria-hidden="true"></span
+              ><svg viewBox="0 0 120 140" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M19 7h82l4 126H68L59 63l-9 70H13z"
+                />
+                <path
+                  fill="none"
+                  stroke="#ffffff70"
+                  d="M20 17h80M55 17v22h5V17M32 17q-1 11-13 15m69-15q1 11 13 15"
+                />
+              </svg>
+            </div>
+            <figcaption id="look-caption"></figcaption>
+          </figure>
+          <p class="field-help">
+            Trousers are a styling idea. Only the tee goes in the demo bag.
           </p>
-          <div class="price-row">
-            <p class="price">$28 <span>USD</span></p>
-            <span class="micro-label">Fictional demo price</span>
-          </div>
+        </div>
+        <div>
+          <h2>The white tee</h2>
+          <p>$28 USD · Fictional demo price</p>
           <form id="product-form" class="product-form" novalidate>
             <fieldset aria-describedby="size-help size-error">
               <legend>Choose a size</legend>
@@ -118,34 +122,14 @@
               Add to demo bag <span aria-hidden="true">↗</span>
             </button>
           </form>
-          <p class="demo-disclaimer">
-            A classroom interaction, using fictional product data. No order,
-            payment, or personal information is collected.
-          </p>
-          <dl class="product-facts">
-            <div>
-              <dt>Color</dt>
-              <dd>White</dd>
-            </div>
-            <div>
-              <dt>Brand identity</dt>
-              <dd>Not decided yet</dd>
-            </div>
-            <div>
-              <dt>Product claims</dt>
-              <dd>None supplied</dd>
-            </div>
-          </dl>
         </div>
       </section>
-
       <section
         id="demo-bag"
         class="bag-section wrap"
         aria-labelledby="bag-title"
       >
         <div>
-          <p class="eyebrow">A small working interaction</p>
           <h2 id="bag-title">Your demo bag.</h2>
         </div>
         <div class="bag-details">
@@ -167,32 +151,9 @@
           </p>
         </div>
       </section>
-
-      <section class="starter-next wrap" aria-labelledby="next-title">
-        <p class="eyebrow">For the person building this site</p>
-        <h2 id="next-title">The shirt stays.<br />The story is your work.</h2>
-        <div>
-          <p>
-            Choose who this is for, decide what the brand should express, and
-            make those choices visible. Keep the storefront and its
-            <a href="styleguide.html">live style guide</a> in sync.
-          </p>
-          <a class="button button-secondary" href="studio.html"
-            >See the studio brief <span aria-hidden="true">↗</span></a
-          >
-        </div>
-      </section>
     </main>
-
-    <footer class="site-footer wrap">
-      <p>
-        IS117 Brand Studio <span class="footer-separator"> / </span> Neutral
-        starter
-      </p>
-      <p class="footer-tagline">Fictional product. Real design decisions.</p>
-      <a href="https://github.com/kaw393939/is117-brand-studio#readme"
-        >Project README <span aria-hidden="true">↗</span></a
-      >
+    <footer class="mast">
+      <span>Class Staple</span><a href="studio.html">Studio brief</a>
     </footer>
   </body>
 </html>

@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #182b40;
+  background: #faf9f3;
+  font:
+    1rem/1.5 Arial,
+    sans-serif;
+}
+
+main {
+  max-width: 76rem;
+  margin: auto;
+  padding: clamp(1rem, 4vw, 4rem);
+}
+
+header {
+  border-bottom: 2px solid;
+  padding-bottom: 1rem;
+  font-size: 1.45rem;
+  font-weight: 750;
+  letter-spacing: -0.05em;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.copy {
+  max-width: 32rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 6.8vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+aside p {
+  max-width: 72ch;
+}
+
+aside a {
+  color: inherit;
+}
+
+.copy p {
+  max-width: 33ch;
+  margin: 1.5rem 0;
+  font-size: 1.15rem;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  background: #172e48;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+}
+
+a:focus-visible {
+  outline: 3px solid #bc480f;
+  outline-offset: 4px;
+}
+
+figure {
+  margin: 0;
+  background: #182e46;
+  padding: clamp(0.65rem, 2vw, 1.8rem);
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-height: 27rem;
+  object-fit: contain;
+  background: #e8eae1;
+}
+
+aside {
+  border-top: 1px solid;
+  padding: 1rem 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.postmodernist {
+  background: repeating-linear-gradient(#faf6e9 0 27px, #d8ded9 28px);
+}
+
+.postmodernist header {
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.postmodernist h1 {
+  font-family: Georgia, serif;
+  font-style: italic;
+  letter-spacing: -0.065em;
+}
+
+.postmodernist h1::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 0.5rem;
+  border-bottom: 4px solid #a94221;
+  border-radius: 50%;
+  transform: rotate(-3deg);
+}
+
+.postmodernist figure {
+  position: relative;
+  transform: rotate(3deg);
+  background: white;
+  box-shadow: 0.5rem 0.6rem #c4c9bf;
+  padding: 1rem 1rem 2rem;
+  margin: 1rem;
+}
+
+.postmodernist figure::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 1.5rem;
+  background: #eed785;
+  top: -0.5rem;
+  left: 35%;
+  transform: rotate(-6deg);
+}
+
+@media (width <= 650px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.7rem;
+    padding: 2rem 0;
+  }
+
+  img {
+    max-height: 19rem;
+  }
+}
+
+.logo-sample {
+  width: auto;
+  background: transparent;
+}
